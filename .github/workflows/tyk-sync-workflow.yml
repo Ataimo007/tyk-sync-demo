@@ -23,5 +23,6 @@ jobs:
         sync \
         -d="${{ secrets.DASHBOARD_URL }}" \
         -s="${{ secrets.DASHBOARD_API_KEY }}" \
-        -p="./tmp"
+        -p="./tmp" \
+        --allow-unsafe-oas
       
