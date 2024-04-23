@@ -1,8 +1,8 @@
 {
   "api_definition": {
-    "id": "6620eb1c09656d0001a34d1b",
+    "id": "662768bf8fa5df0001a5523f",
     "name": "Exchange Http Bin",
-    "slug": "temp",
+    "slug": "exchange-http-bin",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,

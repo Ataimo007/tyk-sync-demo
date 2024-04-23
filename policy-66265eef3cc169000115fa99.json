@@ -12,7 +12,7 @@
   "max_query_depth": -1,
   "access_rights": {
     "b7867f6096ce4b30710f651acbac9b9d": {
-      "api_name": "EDP Http API",
+      "api_name": "Deleted (b7867f6096ce4b30710f651acbac9b9d)",
       "api_id": "b7867f6096ce4b30710f651acbac9b9d",
       "versions": [
         ""
@@ -24,7 +24,7 @@
       "allowance_scope": ""
     },
     "customized-via-oas": {
-      "api_name": "EDP Http API (Customized)",
+      "api_name": "Deleted (customized-via-oas)",
       "api_id": "customized-via-oas",
       "versions": [
         ""

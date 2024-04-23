@@ -1,13 +1,14 @@
 {
   "api_definition": {
-    "name": "EDP Http API (Customized)",
+    "id": "6627712a8fa5df0001a55244",
+    "name": "EDP Http Bin",
     "slug": "",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
-    "api_id": "customized-via-oas",
+    "api_id": "e88a60587d0b4f066d6180616ad554c7",
     "org_id": "654cb1d7b434ee00018701e7",
-    "use_keyless": false,
+    "use_keyless": true,
     "use_oauth2": false,
     "use_openid": false,
     "openid_options": {
@@ -20,13 +21,13 @@
       "auth_login_redirect": ""
     },
     "auth": {
-      "name": "authToken",
+      "name": "",
       "use_param": false,
       "param_name": "",
       "use_cookie": false,
       "cookie_name": "",
       "disable_header": false,
-      "auth_header_name": "Authorization",
+      "auth_header_name": "",
       "use_certificate": false,
       "validate_signature": false,
       "signature": {
@@ -40,29 +41,7 @@
         "error_message": ""
       }
     },
-    "auth_configs": {
-      "authToken": {
-        "name": "authToken",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      }
-    },
+    "auth_configs": {},
     "use_basic_auth": false,
     "basic_auth": {
       "disable_caching": false,
@@ -78,7 +57,7 @@
     "pinned_public_keys": {},
     "certificate_pinning_disabled": true,
     "enable_jwt": false,
-    "use_standard_auth": true,
+    "use_standard_auth": false,
     "use_go_plugin_auth": false,
     "enable_coprocess_auth": false,
     "custom_plugin_auth_enabled": false,
@@ -173,8 +152,8 @@
     },
     "proxy": {
       "preserve_host_header": false,
-      "listen_path": "/oas",
-      "target_url": "https://httpbin.org",
+      "listen_path": "/edp/",
+      "target_url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/oas",
       "disable_strip_slash": false,
       "strip_listen_path": true,
       "enable_load_balancing": false,
@@ -284,7 +263,7 @@
       "per": 0
     },
     "strip_auth_data": false,
-    "enable_detailed_recording": true,
+    "enable_detailed_recording": false,
     "graphql": {
       "enabled": false,
       "execution_mode": "",
@@ -390,7 +369,7 @@
       ],
       "x-providerName": "httpbin.org"
     },
-    "openapi": "3.0.0",
+    "openapi": "3.0.3",
     "paths": {
       "/absolute-redirect/{n}": {
         "get": {
@@ -2203,6 +2182,9 @@
     ],
     "servers": [
       {
+        "url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/edp/"
+      },
+      {
         "url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/oas"
       },
       {
@@ -2258,25 +2240,15 @@
     "x-protocol": "https",
     "x-tyk-api-gateway": {
       "info": {
-        "id": "customized-via-oas",
-        "name": "EDP Http API (Customized)",
+        "dbId": "6627712a8fa5df0001a55244",
+        "id": "e88a60587d0b4f066d6180616ad554c7",
+        "name": "EDP Http Bin",
         "orgId": "654cb1d7b434ee00018701e7",
         "state": {
           "active": true
         }
       },
       "server": {
-        "authentication": {
-          "enabled": true,
-          "securitySchemes": {
-            "authToken": {
-              "enabled": true
-            }
-          }
-        },
-        "detailedActivityLogs": {
-          "enabled": true
-        },
         "gatewayTags": {
           "enabled": true,
           "tags": [
@@ -2285,11 +2257,11 @@
         },
         "listenPath": {
           "strip": true,
-          "value": "/oas"
+          "value": "/edp/"
         }
       },
       "upstream": {
-        "url": "https://httpbin.org"
+        "url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/oas"
       }
     }
   },

@@ -1,12 +1,12 @@
 {
   "api_definition": {
-    "id": "662768bf8fa5df0001a55240",
-    "name": "Open Http Bin",
-    "slug": "open-http-bin",
+    "id": "6627748dd4ff9a000131089f",
+    "name": "OAS Http Bin",
+    "slug": "",
     "listen_port": 0,
     "protocol": "",
     "enable_proxy_protocol": false,
-    "api_id": "d6596b90333d4cca71a42ba910cbb046",
+    "api_id": "6f114450abb44a1a412041f181fd0800",
     "org_id": "654cb1d7b434ee00018701e7",
     "use_keyless": false,
     "use_oauth2": false,
@@ -21,7 +21,7 @@
       "auth_login_redirect": ""
     },
     "auth": {
-      "name": "",
+      "name": "authToken",
       "use_param": false,
       "param_name": "",
       "use_cookie": false,
@@ -43,133 +43,7 @@
     },
     "auth_configs": {
       "authToken": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "basic": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "coprocess": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "hmac": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "jwt": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "oauth": {
-        "name": "",
-        "use_param": false,
-        "param_name": "",
-        "use_cookie": false,
-        "cookie_name": "",
-        "disable_header": false,
-        "auth_header_name": "Authorization",
-        "use_certificate": false,
-        "validate_signature": false,
-        "signature": {
-          "algorithm": "",
-          "header": "",
-          "use_param": false,
-          "param_name": "",
-          "secret": "",
-          "allowed_clock_skew": 0,
-          "error_code": 0,
-          "error_message": ""
-        }
-      },
-      "oidc": {
-        "name": "",
+        "name": "authToken",
         "use_param": false,
         "param_name": "",
         "use_cookie": false,
@@ -201,7 +75,9 @@
     "use_mutual_tls_auth": false,
     "client_certificates": [],
     "upstream_certificates": {},
+    "upstream_certificates_disabled": true,
     "pinned_public_keys": {},
+    "certificate_pinning_disabled": true,
     "enable_jwt": false,
     "use_standard_auth": true,
     "use_go_plugin_auth": false,
@@ -225,7 +101,7 @@
       "oauth_on_keychange_url": ""
     },
     "enable_signature_checking": false,
-    "hmac_allowed_clock_skew": -1,
+    "hmac_allowed_clock_skew": 0,
     "hmac_allowed_algorithms": [],
     "request_signing": {
       "is_enabled": false,
@@ -241,8 +117,8 @@
       "enabled": false,
       "name": "",
       "default": "",
-      "location": "header",
-      "key": "x-api-version",
+      "location": "",
+      "key": "",
       "strip_path": false,
       "strip_versioning_data": false,
       "fallback_to_default": false,
@@ -252,8 +128,8 @@
       "not_versioned": true,
       "default_version": "",
       "versions": {
-        "Default": {
-          "name": "Default",
+        "": {
+          "name": "",
           "expires": "",
           "paths": {
             "ignored": [],
@@ -266,10 +142,10 @@
           },
           "global_headers": {},
           "global_headers_remove": [],
-          "global_headers_disabled": false,
+          "global_headers_disabled": true,
           "global_response_headers": {},
           "global_response_headers_remove": [],
-          "global_response_headers_disabled": false,
+          "global_response_headers_disabled": true,
           "ignore_endpoint_case": false,
           "global_size_limit": 0,
           "override_target": ""
@@ -289,8 +165,8 @@
           "port_data_path": "",
           "target_path": "",
           "use_target_list": false,
-          "cache_disabled": false,
-          "cache_timeout": 60,
+          "cache_disabled": true,
+          "cache_timeout": 0,
           "endpoint_returns_list": false
         },
         "recheck_wait": 0
@@ -298,9 +174,9 @@
     },
     "proxy": {
       "preserve_host_header": false,
-      "listen_path": "/open-http-bin/",
+      "listen_path": "/oas/",
       "target_url": "http://httpbin.org/",
-      "disable_strip_slash": true,
+      "disable_strip_slash": false,
       "strip_listen_path": true,
       "enable_load_balancing": false,
       "target_list": [],
@@ -314,7 +190,7 @@
         "port_data_path": "",
         "target_path": "",
         "use_target_list": false,
-        "cache_disabled": false,
+        "cache_disabled": true,
         "cache_timeout": 0,
         "endpoint_returns_list": false
       },
@@ -334,7 +210,7 @@
       "post": [],
       "post_key_auth": [],
       "auth_check": {
-        "disabled": false,
+        "disabled": true,
         "name": "",
         "path": "",
         "require_session": false,
@@ -343,17 +219,17 @@
       "response": [],
       "driver": "",
       "id_extractor": {
-        "disabled": false,
+        "disabled": true,
         "extract_from": "",
         "extract_with": "",
         "extractor_config": {}
       }
     },
     "custom_middleware_bundle": "",
-    "custom_middleware_bundle_disabled": false,
+    "custom_middleware_bundle_disabled": true,
     "cache_options": {
-      "cache_timeout": 60,
-      "enable_cache": true,
+      "cache_timeout": 0,
+      "enable_cache": false,
       "cache_all_safe_requests": false,
       "cache_response_codes": [],
       "enable_upstream_cache_control": false,
@@ -386,45 +262,34 @@
     "response_processors": [],
     "CORS": {
       "enable": false,
-      "allowed_origins": [
-        "*"
-      ],
-      "allowed_methods": [
-        "GET",
-        "POST",
-        "HEAD"
-      ],
-      "allowed_headers": [
-        "Origin",
-        "Accept",
-        "Content-Type",
-        "X-Requested-With",
-        "Authorization"
-      ],
+      "allowed_origins": [],
+      "allowed_methods": [],
+      "allowed_headers": [],
       "exposed_headers": [],
       "allow_credentials": false,
-      "max_age": 24,
+      "max_age": 0,
       "options_passthrough": false,
       "debug": false
     },
     "domain": "",
+    "domain_disabled": true,
     "certificates": [],
     "do_not_track": false,
-    "enable_context_vars": false,
+    "enable_context_vars": true,
     "config_data": {},
-    "config_data_disabled": false,
+    "config_data_disabled": true,
     "tag_headers": [],
     "global_rate_limit": {
-      "disabled": false,
+      "disabled": true,
       "rate": 0,
       "per": 0
     },
     "strip_auth_data": false,
-    "enable_detailed_recording": false,
+    "enable_detailed_recording": true,
     "graphql": {
       "enabled": false,
-      "execution_mode": "proxyOnly",
-      "version": "2",
+      "execution_mode": "",
+      "version": "",
       "schema": "",
       "type_field_configurations": [],
       "playground": {
@@ -457,8 +322,9 @@
       }
     },
     "tags": [
-      "aws-us-east-1"
+      "edge"
     ],
+    "is_oas": true,
     "detailed_tracing": false,
     "scopes": {
       "jwt": {},
@@ -468,6 +334,70 @@
     "external_oauth": {
       "enabled": false,
       "providers": []
+    }
+  },
+  "oas": {
+    "components": {
+      "securitySchemes": {
+        "authToken": {
+          "in": "header",
+          "name": "Authorization",
+          "type": "apiKey"
+        }
+      }
+    },
+    "info": {
+      "title": "OAS Http Bin",
+      "version": "1.0.0"
+    },
+    "openapi": "3.0.3",
+    "paths": {},
+    "security": [
+      {
+        "authToken": []
+      }
+    ],
+    "servers": [
+      {
+        "url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/oas/"
+      }
+    ],
+    "x-tyk-api-gateway": {
+      "info": {
+        "dbId": "6627748dd4ff9a000131089f",
+        "id": "6f114450abb44a1a412041f181fd0800",
+        "name": "OAS Http Bin",
+        "orgId": "654cb1d7b434ee00018701e7",
+        "state": {
+          "active": true
+        }
+      },
+      "server": {
+        "authentication": {
+          "enabled": true,
+          "securitySchemes": {
+            "authToken": {
+              "enabled": true
+            }
+          }
+        },
+        "detailedActivityLogs": {
+          "enabled": true
+        },
+        "gatewayTags": {
+          "enabled": true,
+          "tags": [
+            "edge"
+          ]
+        },
+        "listenPath": {
+          "strip": true,
+          "value": "/oas/"
+        }
+      },
+      "upstream": {
+        "url": "http://httpbin.org/"
+      }
     }
   },
   "hook_references": [],
