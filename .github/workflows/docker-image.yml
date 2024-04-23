@@ -1,0 +1,27 @@
+name: Synchronize Tyk APIs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  sync:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Sync Configurations to Tyk Dashboard
+      # run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: |
+        docker run --rm \
+        --mount type=bind,source="$(pwd)",target=/opt/tyk-sync/tmp \
+        tykio/tyk-sync:v1.4.3 \
+        sync \
+        -d="https://functional-fridge-adm.aws-use1.cloud-ara.tyk.io" \
+        -s="91f9fe2cbf3e438e572b408843fbb9f9" \
+        -p="./tmp"
+      
