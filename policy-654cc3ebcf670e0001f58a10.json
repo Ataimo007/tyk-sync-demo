@@ -1,0 +1,42 @@
+{
+  "_id": "654cc3ebcf670e0001f58a10",
+  "id": "654cc3ebcf670e0001f58a10",
+  "name": "Token Http Bin Policy",
+  "org_id": "654cb1d7b434ee00018701e7",
+  "rate": 1000,
+  "per": 60,
+  "quota_max": -1,
+  "quota_renewal_rate": -1,
+  "throttle_interval": -1,
+  "throttle_retry_limit": -1,
+  "max_query_depth": -1,
+  "access_rights": {
+    "ebb38d6077024a9177109ccca5d62922": {
+      "api_name": "Token Http Bin",
+      "api_id": "ebb38d6077024a9177109ccca5d62922",
+      "versions": [
+        "Default"
+      ],
+      "allowed_urls": [],
+      "restricted_types": [],
+      "limit": null,
+      "field_access_rights": [],
+      "allowance_scope": ""
+    }
+  },
+  "hmac_enabled": false,
+  "active": true,
+  "is_inactive": false,
+  "date_created": "2023-11-09T11:35:07.116Z",
+  "tags": [],
+  "key_expires_in": 0,
+  "partitions": {
+    "quota": true,
+    "rate_limit": true,
+    "complexity": false,
+    "acl": true,
+    "per_api": false
+  },
+  "last_updated": "1699529707",
+  "meta_data": {}
+}

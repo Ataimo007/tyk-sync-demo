@@ -1,0 +1,2571 @@
+{
+  "api_definition": {
+    "id": "661e83e509656d0001a34d18",
+    "name": "Luma",
+    "slug": "",
+    "listen_port": 0,
+    "protocol": "",
+    "enable_proxy_protocol": false,
+    "api_id": "7ccf7a2b129c48736ebb277a4c73237d",
+    "org_id": "654cb1d7b434ee00018701e7",
+    "use_keyless": false,
+    "use_oauth2": false,
+    "use_openid": false,
+    "openid_options": {
+      "providers": [],
+      "segregate_by_client": false
+    },
+    "oauth_meta": {
+      "allowed_access_types": [],
+      "allowed_authorize_types": [],
+      "auth_login_redirect": ""
+    },
+    "auth": {
+      "name": "",
+      "use_param": false,
+      "param_name": "",
+      "use_cookie": false,
+      "cookie_name": "",
+      "disable_header": false,
+      "auth_header_name": "",
+      "use_certificate": false,
+      "validate_signature": false,
+      "signature": {
+        "algorithm": "",
+        "header": "",
+        "use_param": false,
+        "param_name": "",
+        "secret": "",
+        "allowed_clock_skew": 0,
+        "error_code": 0,
+        "error_message": ""
+      }
+    },
+    "auth_configs": {
+      "jwt": {
+        "name": "jwtAuth",
+        "use_param": false,
+        "param_name": "",
+        "use_cookie": false,
+        "cookie_name": "",
+        "disable_header": false,
+        "auth_header_name": "Authorization",
+        "use_certificate": false,
+        "validate_signature": false,
+        "signature": {
+          "algorithm": "",
+          "header": "",
+          "use_param": false,
+          "param_name": "",
+          "secret": "",
+          "allowed_clock_skew": 0,
+          "error_code": 0,
+          "error_message": ""
+        }
+      }
+    },
+    "use_basic_auth": false,
+    "basic_auth": {
+      "disable_caching": false,
+      "cache_ttl": 0,
+      "extract_from_body": false,
+      "body_user_regexp": "",
+      "body_password_regexp": ""
+    },
+    "use_mutual_tls_auth": false,
+    "client_certificates": [],
+    "upstream_certificates": {},
+    "upstream_certificates_disabled": true,
+    "pinned_public_keys": {},
+    "certificate_pinning_disabled": true,
+    "enable_jwt": true,
+    "use_standard_auth": false,
+    "use_go_plugin_auth": false,
+    "enable_coprocess_auth": false,
+    "custom_plugin_auth_enabled": false,
+    "jwt_signing_method": "rsa",
+    "jwt_source": "aHR0cHM6Ly9rZXljbG9hay10ZXN0Lml0Zy5jby51ay9yZWFsbXMvY2ktdGVzdC9wcm90b2NvbC9vcGVuaWQtY29ubmVjdC9jZXJ0cw==",
+    "jwt_identity_base_field": "azp",
+    "jwt_client_base_field": "",
+    "jwt_policy_field_name": "pol",
+    "jwt_default_policies": [
+      "6617f2f2a094ac0001781389"
+    ],
+    "jwt_issued_at_validation_skew": 0,
+    "jwt_expires_at_validation_skew": 0,
+    "jwt_not_before_validation_skew": 0,
+    "jwt_skip_kid": false,
+    "idp_client_id_mapping_disabled": false,
+    "jwt_scope_to_policy_mapping": {},
+    "jwt_scope_claim_name": "",
+    "notifications": {
+      "shared_secret": "",
+      "oauth_on_keychange_url": ""
+    },
+    "enable_signature_checking": false,
+    "hmac_allowed_clock_skew": 0,
+    "hmac_allowed_algorithms": [],
+    "request_signing": {
+      "is_enabled": false,
+      "secret": "",
+      "key_id": "",
+      "algorithm": "",
+      "header_list": [],
+      "certificate_id": "",
+      "signature_header": ""
+    },
+    "base_identity_provided_by": "",
+    "definition": {
+      "enabled": false,
+      "name": "",
+      "default": "",
+      "location": "",
+      "key": "",
+      "strip_path": false,
+      "strip_versioning_data": false,
+      "fallback_to_default": false,
+      "versions": {}
+    },
+    "version_data": {
+      "not_versioned": true,
+      "default_version": "",
+      "versions": {
+        "": {
+          "name": "",
+          "expires": "",
+          "paths": {
+            "ignored": [],
+            "white_list": [],
+            "black_list": []
+          },
+          "use_extended_paths": true,
+          "extended_paths": {
+            "ignored": [
+              {
+                "disabled": false,
+                "path": "/token",
+                "method": "POST",
+                "ignore_case": true
+              }
+            ],
+            "url_rewrites": [
+              {
+                "disabled": false,
+                "path": "/ListAssets",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListKeywords",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/com.intrepia.luma.ListUserDomains",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/GetAssetDerivativeMenu",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/GetAssetInfo",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/GetAssetTaxonomy",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/DownloadAssetDerivative",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/EditAssetKeywords",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListTransforms",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListAssetNarratives",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/GetAsset",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/GetAssetFields",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListAssetAvailability",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/token",
+                "method": "POST",
+                "match_pattern": "/token",
+                "rewrite_to": "https://keycloak-test.itg.co.uk/realms/ci-test/protocol/openid-connect/token",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/DownloadAssetPreview",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListGenera",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              },
+              {
+                "disabled": false,
+                "path": "/ListLensesForDomain",
+                "method": "GET",
+                "match_pattern": "\\/cmp\\/v2\\/(.*)",
+                "rewrite_to": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1",
+                "triggers": []
+              }
+            ],
+            "persist_graphql": []
+          },
+          "global_headers": {},
+          "global_headers_remove": [],
+          "global_headers_disabled": true,
+          "global_response_headers": {},
+          "global_response_headers_remove": [],
+          "global_response_headers_disabled": true,
+          "ignore_endpoint_case": false,
+          "global_size_limit": 0,
+          "override_target": ""
+        }
+      }
+    },
+    "uptime_tests": {
+      "check_list": [],
+      "config": {
+        "expire_utime_after": 0,
+        "service_discovery": {
+          "use_discovery_service": false,
+          "query_endpoint": "",
+          "use_nested_query": false,
+          "parent_data_path": "",
+          "data_path": "",
+          "port_data_path": "",
+          "target_path": "",
+          "use_target_list": false,
+          "cache_disabled": true,
+          "cache_timeout": 0,
+          "endpoint_returns_list": false
+        },
+        "recheck_wait": 0
+      }
+    },
+    "proxy": {
+      "preserve_host_header": false,
+      "listen_path": "/cmp/v2/",
+      "target_url": "http://placeholder",
+      "disable_strip_slash": false,
+      "strip_listen_path": true,
+      "enable_load_balancing": false,
+      "target_list": [],
+      "check_host_against_uptime_tests": false,
+      "service_discovery": {
+        "use_discovery_service": false,
+        "query_endpoint": "",
+        "use_nested_query": false,
+        "parent_data_path": "",
+        "data_path": "",
+        "port_data_path": "",
+        "target_path": "",
+        "use_target_list": false,
+        "cache_disabled": true,
+        "cache_timeout": 0,
+        "endpoint_returns_list": false
+      },
+      "transport": {
+        "ssl_insecure_skip_verify": false,
+        "ssl_ciphers": [],
+        "ssl_min_version": 0,
+        "ssl_max_version": 0,
+        "ssl_force_common_name_check": false,
+        "proxy_url": ""
+      }
+    },
+    "disable_rate_limit": false,
+    "disable_quota": false,
+    "custom_middleware": {
+      "pre": [],
+      "post": [],
+      "post_key_auth": [],
+      "auth_check": {
+        "disabled": true,
+        "name": "",
+        "path": "",
+        "require_session": false,
+        "raw_body_only": false
+      },
+      "response": [],
+      "driver": "",
+      "id_extractor": {
+        "disabled": true,
+        "extract_from": "",
+        "extract_with": "",
+        "extractor_config": {}
+      }
+    },
+    "custom_middleware_bundle": "",
+    "custom_middleware_bundle_disabled": true,
+    "cache_options": {
+      "cache_timeout": 60,
+      "enable_cache": true,
+      "cache_all_safe_requests": false,
+      "cache_response_codes": [],
+      "enable_upstream_cache_control": false,
+      "cache_control_ttl_header": "",
+      "cache_by_headers": []
+    },
+    "session_lifetime": 0,
+    "active": true,
+    "internal": false,
+    "auth_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": {}
+    },
+    "session_provider": {
+      "name": "",
+      "storage_engine": "",
+      "meta": {}
+    },
+    "event_handlers": {
+      "events": {}
+    },
+    "enable_batch_request_support": false,
+    "enable_ip_whitelisting": false,
+    "allowed_ips": [],
+    "enable_ip_blacklisting": false,
+    "blacklisted_ips": [],
+    "dont_set_quota_on_create": false,
+    "expire_analytics_after": 0,
+    "response_processors": [],
+    "CORS": {
+      "enable": false,
+      "allowed_origins": [],
+      "allowed_methods": [],
+      "allowed_headers": [],
+      "exposed_headers": [],
+      "allow_credentials": false,
+      "max_age": 0,
+      "options_passthrough": false,
+      "debug": false
+    },
+    "domain": "enterprise.api.storyteq.com",
+    "domain_disabled": true,
+    "certificates": [],
+    "do_not_track": false,
+    "enable_context_vars": true,
+    "config_data": {},
+    "config_data_disabled": true,
+    "tag_headers": [],
+    "global_rate_limit": {
+      "disabled": true,
+      "rate": 0,
+      "per": 0
+    },
+    "strip_auth_data": false,
+    "enable_detailed_recording": true,
+    "graphql": {
+      "enabled": false,
+      "execution_mode": "",
+      "version": "",
+      "schema": "",
+      "type_field_configurations": [],
+      "playground": {
+        "enabled": false,
+        "path": ""
+      },
+      "engine": {
+        "field_configs": [],
+        "data_sources": [],
+        "global_headers": []
+      },
+      "proxy": {
+        "auth_headers": {},
+        "request_headers": {},
+        "use_response_extensions": {
+          "on_error_forwarding": false
+        }
+      },
+      "subgraph": {
+        "sdl": ""
+      },
+      "supergraph": {
+        "subgraphs": [],
+        "merged_sdl": "",
+        "global_headers": {},
+        "disable_query_batching": false
+      },
+      "introspection": {
+        "disabled": false
+      }
+    },
+    "tags": [
+      "edge"
+    ],
+    "is_oas": true,
+    "detailed_tracing": true,
+    "scopes": {
+      "jwt": {},
+      "oidc": {}
+    },
+    "analytics_plugin": {},
+    "external_oauth": {
+      "enabled": false,
+      "providers": []
+    }
+  },
+  "oas": {
+    "components": {
+      "schemas": {
+        "Affiliation": {
+          "properties": {
+            "assignable": {
+              "type": "boolean"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "uuid": {
+              "type": "string"
+            },
+            "workflowable": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "DownloadAssetDerivativeLinkResponse": {
+          "properties": {
+            "expires": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            },
+            "generated": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "Filter": {
+          "properties": {
+            "applied": {
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "clauses": {
+              "items": {
+                "$ref": "#/components/schemas/SearchClause"
+              },
+              "type": "array"
+            },
+            "counts": {
+              "type": "boolean"
+            },
+            "folderID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "folders": {
+              "items": {
+                "$ref": "#/components/schemas/Folder"
+              },
+              "type": "array"
+            },
+            "ignoreApplied": {
+              "type": "boolean"
+            },
+            "ignoreDomains": {
+              "type": "boolean"
+            },
+            "includeDescendants": {
+              "type": "boolean"
+            },
+            "includeSubFolders": {
+              "nullable": true,
+              "type": "boolean"
+            },
+            "keywordIDs": {
+              "items": {
+                "format": "int64",
+                "type": "integer"
+              },
+              "type": "array"
+            },
+            "keywords": {
+              "items": {
+                "$ref": "#/components/schemas/Keyword"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "operation": {
+              "type": "string"
+            },
+            "options": {
+              "items": {
+                "properties": {
+                  "count": {
+                    "format": "int32",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "taxonomy": {
+              "items": {
+                "$ref": "#/components/schemas/Taxonomy"
+              },
+              "type": "array"
+            },
+            "type": {
+              "type": "string"
+            },
+            "types": {
+              "items": {
+                "$ref": "#/components/schemas/FilterType"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "FilterType": {
+          "properties": {
+            "count": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "subtypes": {
+              "items": {
+                "$ref": "#/components/schemas/FilterType"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "Folder": {
+          "properties": {
+            "count": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "subfolders": {
+              "items": {
+                "$ref": "#/components/schemas/Folder"
+              },
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "Genus": {
+          "properties": {
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "keywords": {
+              "items": {
+                "$ref": "#/components/schemas/Keyword"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "GetAssetDerivativeMenuResponse": {
+          "properties": {
+            "count": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "size": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "uuid": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "GetAssetFieldsResponse": {
+          "properties": {
+            "description": {
+              "type": "string"
+            },
+            "domain-title": {
+              "type": "string"
+            },
+            "domain-uri": {
+              "type": "string"
+            },
+            "domainID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "inherited": {
+              "type": "boolean"
+            },
+            "localisation": {
+              "type": "string"
+            },
+            "metadata": {
+              "$ref": "#/components/schemas/MetadataResponse"
+            },
+            "name": {
+              "type": "string"
+            },
+            "nullable": {
+              "type": "boolean"
+            },
+            "options": {
+              "items": {
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "localisation": {
+                    "type": "string"
+                  },
+                  "option": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "placeholder": {
+              "type": "string"
+            },
+            "primitive": {
+              "type": "string"
+            },
+            "required": {
+              "type": "boolean"
+            },
+            "revert": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type-localisation": {
+              "type": "string"
+            },
+            "type-name": {
+              "type": "string"
+            },
+            "type-uri": {
+              "type": "string"
+            },
+            "typeID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "uuid": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            },
+            "view-alias": {
+              "type": "string"
+            },
+            "view-metadata": {
+              "$ref": "#/components/schemas/MetadataResponse"
+            },
+            "view-mode": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "GetAssetInfoResponse": {
+          "properties": {
+            "adaptor": {
+              "type": "string"
+            },
+            "annotations-supported": {
+              "type": "boolean"
+            },
+            "approved": {
+              "type": "boolean"
+            },
+            "atom-UUID": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "atomID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "available": {
+              "type": "boolean"
+            },
+            "busy": {
+              "type": "boolean"
+            },
+            "created": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            },
+            "domain-id": {
+              "type": "string"
+            },
+            "domain-title": {
+              "type": "string"
+            },
+            "domain-uri": {
+              "type": "string"
+            },
+            "embargoed": {
+              "type": "boolean"
+            },
+            "flagged": {
+              "type": "boolean"
+            },
+            "folder": {
+              "type": "string"
+            },
+            "folderID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "format-name": {
+              "type": "string"
+            },
+            "hidden": {
+              "type": "boolean"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "lcoked": {
+              "type": "boolean"
+            },
+            "mirrors": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "modified": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "phase": {
+              "type": "string"
+            },
+            "placeholder": {
+              "type": "boolean"
+            },
+            "rejected": {
+              "type": "boolean"
+            },
+            "reviewing": {
+              "type": "boolean"
+            },
+            "revision": {
+              "type": "string"
+            },
+            "subscribed": {
+              "type": "boolean"
+            },
+            "supertype": {
+              "type": "string"
+            },
+            "tree": {
+              "type": "string"
+            },
+            "type-name": {
+              "type": "string"
+            },
+            "type-uri": {
+              "type": "string"
+            },
+            "typeID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "uuid": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "GetAssetResponse": {
+          "properties": {
+            "call": {
+              "type": "string"
+            },
+            "count": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "filters": {
+              "items": {
+                "$ref": "#/components/schemas/Filter"
+              },
+              "type": "array"
+            },
+            "limit": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "offset": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "order": {
+              "type": "string"
+            },
+            "sort": {
+              "type": "string"
+            },
+            "sorting": {
+              "items": {
+                "$ref": "#/components/schemas/Sorting"
+              },
+              "type": "array"
+            },
+            "table": {
+              "items": {
+                "properties": {
+                  "adaptor": {
+                    "type": "string"
+                  },
+                  "annotations-supported": {
+                    "type": "boolean"
+                  },
+                  "approved": {
+                    "type": "boolean"
+                  },
+                  "atomID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "atomUUID": {
+                    "type": "string"
+                  },
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "basketed": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "busy": {
+                    "type": "boolean"
+                  },
+                  "created": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "domainID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "embargoed": {
+                    "type": "boolean"
+                  },
+                  "extension": {
+                    "type": "string"
+                  },
+                  "folderID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "locked": {
+                    "type": "boolean"
+                  },
+                  "modified": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "phase": {
+                    "type": "string"
+                  },
+                  "placeholder": {
+                    "type": "boolean"
+                  },
+                  "size": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "stateID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "subscribed": {
+                    "type": "boolean"
+                  },
+                  "supertype": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "typeID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "uuid": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "total": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "vector": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "GetAssetTaxonomyResponse": {
+          "properties": {
+            "domainID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "genera": {
+              "items": {
+                "$ref": "#/components/schemas/Genus"
+              },
+              "type": "array"
+            },
+            "genusID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "keywords": {
+              "items": {
+                "$ref": "#/components/schemas/Keyword"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "Keyword": {
+          "properties": {
+            "applied": {
+              "type": "boolean"
+            },
+            "count": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "domain-title": {
+              "type": "string"
+            },
+            "domain-uri": {
+              "type": "string"
+            },
+            "domainID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "genus-alias": {
+              "type": "string"
+            },
+            "genus-localisation": {
+              "type": "string"
+            },
+            "genus-name": {
+              "type": "string"
+            },
+            "genus-type": {
+              "type": "string"
+            },
+            "genusID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "localisation": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "Lens": {
+          "properties": {
+            "created": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "modified": {
+              "format": "date-time",
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "uuid": {
+              "format": "uuid",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListAssetAvailabilityResponse": {
+          "properties": {
+            "available": {
+              "type": "boolean"
+            },
+            "end": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "start": {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListAssetNarrativeResponse": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListAssetsResponse": {
+          "properties": {
+            "call": {
+              "type": "string"
+            },
+            "count": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "filters": {
+              "items": {
+                "$ref": "#/components/schemas/Filter"
+              },
+              "type": "array"
+            },
+            "limit": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "offset": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "order": {
+              "type": "string"
+            },
+            "sort": {
+              "type": "string"
+            },
+            "sorting": {
+              "items": {
+                "$ref": "#/components/schemas/Sorting"
+              },
+              "type": "array"
+            },
+            "table": {
+              "items": {
+                "properties": {
+                  "adaptor": {
+                    "type": "string"
+                  },
+                  "annotations-supported": {
+                    "type": "boolean"
+                  },
+                  "approved": {
+                    "type": "boolean"
+                  },
+                  "atomID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "atomUUID": {
+                    "type": "string"
+                  },
+                  "available": {
+                    "type": "boolean"
+                  },
+                  "basketed": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "busy": {
+                    "type": "boolean"
+                  },
+                  "created": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "domainID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "embargoed": {
+                    "type": "boolean"
+                  },
+                  "extension": {
+                    "type": "string"
+                  },
+                  "folderID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "id": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "locked": {
+                    "type": "boolean"
+                  },
+                  "modified": {
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2} GMT[\\+|\\-]\\d{4}$",
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "phase": {
+                    "type": "string"
+                  },
+                  "placeholder": {
+                    "type": "boolean"
+                  },
+                  "size": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "state": {
+                    "type": "string"
+                  },
+                  "stateID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "subscribed": {
+                    "type": "boolean"
+                  },
+                  "supertype": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "typeID": {
+                    "format": "int64",
+                    "type": "integer"
+                  },
+                  "uuid": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "total": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "vector": {
+              "format": "int32",
+              "type": "integer"
+            }
+          },
+          "type": "object"
+        },
+        "ListGeneraResponse": {
+          "properties": {
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListKeywordsResponse": {
+          "properties": {
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListLensesForDomainResponse": {
+          "properties": {
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "lenses": {
+              "items": {
+                "$ref": "#/components/schemas/Lens"
+              },
+              "type": "array"
+            },
+            "title": {
+              "type": "string"
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListTransformsResponse": {
+          "properties": {
+            "enabled": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "integer"
+            },
+            "kind": {
+              "enum": [
+                "Derivative",
+                "Generator",
+                "Output",
+                "Recipe"
+              ],
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "ListUserDomainsResponse": {
+          "properties": {
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "uri": {
+              "type": "string"
+            },
+            "uuid": {
+              "format": "uuid",
+              "type": "string"
+            },
+            "writable": {
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        },
+        "MetadataResponse": {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        "SearchClause": {
+          "properties": {
+            "affiliations": {
+              "items": {
+                "$ref": "#/components/schemas/Affiliation"
+              },
+              "type": "array"
+            },
+            "flags": {
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "realm": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "Sorting": {
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "Taxonomy": {
+          "properties": {
+            "domainID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "genera": {
+              "items": {
+                "$ref": "#/components/schemas/Genus"
+              },
+              "type": "array"
+            },
+            "genusID": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "id": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "keywords": {
+              "items": {
+                "$ref": "#/components/schemas/Keyword"
+              },
+              "type": "array"
+            },
+            "name": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "uri": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "securitySchemes": {
+        "jwtAuth": {
+          "bearerFormat": "JWT",
+          "scheme": "bearer",
+          "type": "http"
+        }
+      }
+    },
+    "info": {
+      "title": "Luma",
+      "version": "1.0.0"
+    },
+    "openapi": "3.0.3",
+    "paths": {
+      "/DownloadAssetDerivative": {
+        "get": {
+          "operationId": "DownloadAssetDerivative",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve the binary file for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The ID of the transfoerm used to create the derivative.",
+              "in": "query",
+              "name": "transformID",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "description": "The required operation. 'Download' returns the binary file, 'Link' returns an expiring link to download the asset, and 'Size' returns the derivative's size in bytes.",
+              "in": "query",
+              "name": "operation",
+              "schema": {
+                "default": "Download",
+                "enum": [
+                  "Download",
+                  "Link",
+                  "Size"
+                ],
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/DownloadAssetDerivativeLinkResponse"
+                  }
+                },
+                "application/octet-stream": {
+                  "schema": {
+                    "format": "binary",
+                    "type": "string"
+                  }
+                }
+              },
+              "description": "The binary file of the asset derivative."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Download the binary file of the asset derivative",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/DownloadAssetPreview": {
+        "get": {
+          "operationId": "DownloadAssetPreview",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve the thumbnail for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The recipe for the thumbnail - used to specify the dimension of the thumbnail.",
+              "example": "Icon_256",
+              "in": "query",
+              "name": "recipe",
+              "required": true,
+              "schema": {
+                "enum": [
+                  "Icon_64",
+                  "Icon_128",
+                  "Icon_256",
+                  "Icon_512",
+                  "Icon_1024",
+                  "Icon_2048"
+                ],
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/octet-stream": {
+                  "schema": {
+                    "format": "binary",
+                    "type": "string"
+                  }
+                }
+              },
+              "description": "The binary thumbnail of the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Download a binary thumbnail of an asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/EditAssetKeywords": {
+        "get": {
+          "operationId": "EditAssetKeywords",
+          "parameters": [
+            {
+              "description": "The IDs of the assets whose keywords need to be modified.",
+              "in": "query",
+              "name": "assetIDs",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The IDs of the keywords that need to be modified.",
+              "in": "query",
+              "name": "keywordIDs",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The required operation on the specified keywords.",
+              "in": "query",
+              "name": "operation",
+              "required": true,
+              "schema": {
+                "enum": [
+                  "Add",
+                  "Remove"
+                ],
+                "type": "string"
+              }
+            },
+            {
+              "description": "The binding - must always be Asset.",
+              "in": "query",
+              "name": "binding",
+              "required": true,
+              "schema": {
+                "enum": [
+                  "Asset"
+                ],
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "204": {
+              "description": "No Content. The server successfully processed the request, but is not returning any content."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Edit keywords assigned to an asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/GetAsset": {
+        "get": {
+          "operationId": "GetAsset",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve information for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/GetAssetResponse"
+                  }
+                }
+              },
+              "description": "Information on the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get information on the specified Asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/GetAssetDerivativeMenu": {
+        "get": {
+          "operationId": "GetAssetDerivativeMenu",
+          "parameters": [
+            {
+              "description": "A comma separated list of asset IDs to retrieve derivatives for.",
+              "in": "query",
+              "name": "assetIDs",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The intent for the derivative. Possible values are 'download' and 'order'.",
+              "example": "download",
+              "in": "query",
+              "name": "intents",
+              "required": true,
+              "schema": {
+                "enum": [
+                  "download",
+                  "order"
+                ],
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/GetAssetDerivativeMenuResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of objects that represent the derivative, and contain theinformation about the transform used."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get a list of objects representing derivatives.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/GetAssetFields": {
+        "get": {
+          "operationId": "GetAssetFields",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve the list of fields for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/GetAssetFieldsResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of field objects containing the name and values of fields associated with the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get a list of custom fields and their values for a specified asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/GetAssetInfo": {
+        "get": {
+          "operationId": "GetAssetInfo",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve extended information for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/GetAssetInfoResponse"
+                  }
+                }
+              },
+              "description": "Extended information on the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get extended information on a specific Asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/GetAssetTaxonomy": {
+        "get": {
+          "operationId": "GetAssetTaxonomy",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve taxonomy for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "Ignore the domain object in the response.",
+              "example": true,
+              "in": "query",
+              "name": "ignoreDomains",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/GetAssetTaxonomyResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An aray of taxonmy objects for the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get a list of taxonomy objects for a specified asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/ListAssetAvailability": {
+        "get": {
+          "operationId": "ListAssetAvailability",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve availabilities for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListAssetAvailabilityResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of availabilities for the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Lists the availabilities for a specified asset.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/ListAssetNarratives": {
+        "get": {
+          "operationId": "ListAssetNarratives",
+          "parameters": [
+            {
+              "description": "The ID of the asset to retrieve availabilities for.",
+              "in": "query",
+              "name": "assetID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListAssetNarrativeResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of narratives for the specified asset."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "Get all narratives associated with an asset, including Usage and Description.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/ListAssets": {
+        "get": {
+          "operationId": "ListAssets",
+          "parameters": [
+            {
+              "description": "The ID of the domain that contains the required assets.",
+              "in": "query",
+              "name": "domainID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "The UUID of the Lens that has been specifically configured to filter assets.",
+              "in": "query",
+              "name": "lensID",
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "description": "The filter objects that determine the assets returned.",
+              "in": "query",
+              "name": "filters",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListAssetsResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of Asset objects that meet the given criteria."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all Assets that meet the given criteria.",
+          "tags": [
+            "Asset"
+          ]
+        }
+      },
+      "/ListGenera": {
+        "get": {
+          "operationId": "ListGenera",
+          "parameters": [
+            {
+              "description": "The domain ID of the domain that contains the required Genera.",
+              "in": "query",
+              "name": "domainID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListGeneraResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of Genera objects for the specified domain."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all Genera for the specified domain",
+          "tags": [
+            "Discovery"
+          ]
+        }
+      },
+      "/ListKeywords": {
+        "get": {
+          "operationId": "ListKeywords",
+          "parameters": [
+            {
+              "description": "The ID of the genus that contains the required keywords.",
+              "in": "query",
+              "name": "genusID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListKeywordsResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of Keyword objects for the specified Genus."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all Genera for the specified domain",
+          "tags": [
+            "Discovery"
+          ]
+        }
+      },
+      "/ListLensesForDomain": {
+        "get": {
+          "operationId": "ListLensesForDomain",
+          "parameters": [
+            {
+              "description": "The ID of the domain that contains the required lenses.",
+              "in": "query",
+              "name": "domainID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            },
+            {
+              "description": "Ignore the domain object in the response. If true, returns an array of lens objects only.",
+              "example": true,
+              "in": "query",
+              "name": "ignoreDomains",
+              "required": true,
+              "schema": {
+                "type": "boolean"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "oneOf": [
+                        {
+                          "$ref": "#/components/schemas/ListLensesForDomainResponse"
+                        },
+                        {
+                          "$ref": "#/components/schemas/Lens"
+                        }
+                      ]
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of Lense objects for the specified domain."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all lenses for the specified domain",
+          "tags": [
+            "Discovery"
+          ]
+        }
+      },
+      "/ListTransforms": {
+        "get": {
+          "operationId": "ListTransforms",
+          "parameters": [
+            {
+              "description": "The ID of the domain that contains the required transforms.",
+              "in": "query",
+              "name": "domainID",
+              "required": true,
+              "schema": {
+                "type": "integer"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListTransformsResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of Transforms for the specified domain."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all transforms for the specified domain",
+          "tags": [
+            "Discovery"
+          ]
+        }
+      },
+      "/com.intrepia.luma.ListUserDomains": {
+        "get": {
+          "operationId": "ListUserDomainsget",
+          "responses": {
+            "200": {
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "items": {
+                      "$ref": "#/components/schemas/ListUserDomainsResponse"
+                    },
+                    "type": "array"
+                  }
+                }
+              },
+              "description": "An array of domain objects."
+            },
+            "500": {
+              "description": "Internal Server Error"
+            }
+          },
+          "summary": "List all Domains",
+          "tags": [
+            "Discovery"
+          ]
+        }
+      },
+      "/token": {
+        "post": {
+          "operationId": "tokenpost",
+          "responses": {
+            "200": {
+              "description": ""
+            }
+          }
+        }
+      }
+    },
+    "security": [
+      {
+        "jwtAuth": []
+      }
+    ],
+    "servers": [
+      {
+        "url": "https://supposed-recorder-gw.aws-use1.cloud-ara.tyk.io/cmp/v2/"
+      },
+      {
+        "url": "https://hidden-bookend-gw.aws-euc1.cloud-ara.tyk.io/cmp/v2/"
+      }
+    ],
+    "x-tyk-api-gateway": {
+      "info": {
+        "dbId": "661e83e509656d0001a34d18",
+        "id": "7ccf7a2b129c48736ebb277a4c73237d",
+        "name": "Luma",
+        "orgId": "654cb1d7b434ee00018701e7",
+        "state": {
+          "active": true
+        }
+      },
+      "middleware": {
+        "global": {
+          "cache": {
+            "enabled": true,
+            "timeout": 60
+          }
+        },
+        "operations": {
+          "DownloadAssetDerivative": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "DownloadAssetPreview": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "EditAssetKeywords": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "GetAsset": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "GetAssetDerivativeMenu": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "GetAssetFields": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "GetAssetInfo": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "GetAssetTaxonomy": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListAssetAvailability": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListAssetNarratives": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListAssets": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListGenera": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListKeywords": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListLensesForDomain": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListTransforms": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "ListUserDomainsget": {
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "\\/cmp\\/v2\\/(.*)",
+              "rewriteTo": "$tyk_context.headers_Cmp_Tenant/servlet/api/v1/com.intrepia.luma.$1"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          },
+          "tokenpost": {
+            "ignoreAuthentication": {
+              "enabled": true,
+              "ignoreCase": true
+            },
+            "urlRewrite": {
+              "enabled": true,
+              "pattern": "/token",
+              "rewriteTo": "https://keycloak-test.itg.co.uk/realms/ci-test/protocol/openid-connect/token"
+            },
+            "validateRequest": {
+              "enabled": true,
+              "errorResponseCode": 422
+            }
+          }
+        }
+      },
+      "server": {
+        "authentication": {
+          "enabled": true,
+          "securitySchemes": {
+            "jwtAuth": {
+              "defaultPolicies": [
+                "6617f2f2a094ac0001781389"
+              ],
+              "enabled": true,
+              "header": {
+                "enabled": true,
+                "name": "Authorization"
+              },
+              "identityBaseField": "azp",
+              "policyFieldName": "pol",
+              "signingMethod": "rsa",
+              "source": "aHR0cHM6Ly9rZXljbG9hay10ZXN0Lml0Zy5jby51ay9yZWFsbXMvY2ktdGVzdC9wcm90b2NvbC9vcGVuaWQtY29ubmVjdC9jZXJ0cw=="
+            }
+          }
+        },
+        "customDomain": {
+          "enabled": false,
+          "name": "enterprise.api.storyteq.com"
+        },
+        "detailedActivityLogs": {
+          "enabled": true
+        },
+        "detailedTracing": {
+          "enabled": true
+        },
+        "gatewayTags": {
+          "enabled": true,
+          "tags": [
+            "edge"
+          ]
+        },
+        "listenPath": {
+          "strip": true,
+          "value": "/cmp/v2/"
+        }
+      },
+      "upstream": {
+        "url": "http://placeholder"
+      }
+    }
+  },
+  "hook_references": [],
+  "is_site": false,
+  "sort_by": 0,
+  "user_group_owners": [],
+  "user_owners": []
+}
