@@ -21,7 +21,7 @@ jobs:
         --mount type=bind,source="$(pwd)",target=/opt/tyk-sync/tmp \
         tykio/tyk-sync:v1.4.3 \
         sync \
-        -d="https://functional-fridge-adm.aws-use1.cloud-ara.tyk.io" \
-        -s="91f9fe2cbf3e438e572b408843fbb9f9" \
+        -d="${{ secrets.DASHBOARD_API_KEY }}" \
+        -s="${{ secrets.DASHBOARD_URL }}" \
         -p="./tmp"
       
