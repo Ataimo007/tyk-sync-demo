@@ -1,0 +1,43 @@
+{
+  "type": "apidef",
+  "files": [
+    {
+      "file": "api-b7867f6096ce4b30710f651acbac9b9d.json",
+      "oas": {}
+    },
+    {
+      "file": "api-c931589edfce4d4b5ccdedb3080acb63.json",
+      "oas": {}
+    },
+    {
+      "file": "api-7ccf7a2b129c48736ebb277a4c73237d.json",
+      "oas": {}
+    },
+    {
+      "file": "api-d6596b90333d4cca71a42ba910cbb046.json",
+      "oas": {}
+    },
+    {
+      "file": "api-b63b2620aca94468621541d4b0c81680.json",
+      "oas": {}
+    },
+    {
+      "file": "api-ebb38d6077024a9177109ccca5d62922.json",
+      "oas": {}
+    }
+  ],
+  "policies": [
+    {
+      "file": "policy-654cc3ebcf670e0001f58a10.json"
+    },
+    {
+      "file": "policy-65b90675e434f40001250fd2.json"
+    },
+    {
+      "file": "policy-66265ec88fa5df0001a55239.json"
+    },
+    {
+      "file": "policy-66265eef3cc169000115fa99.json"
+    }
+  ]
+}
