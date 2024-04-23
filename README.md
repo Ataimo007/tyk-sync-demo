@@ -1,1 +1,1 @@
-# tyk-sync-demo
+# Tyk Sync Demo
