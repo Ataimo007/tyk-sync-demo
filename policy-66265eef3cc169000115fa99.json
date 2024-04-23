@@ -22,6 +22,18 @@
       "limit": null,
       "field_access_rights": [],
       "allowance_scope": ""
+    },
+    "customized-via-oas": {
+      "api_name": "EDP Http API (Customized)",
+      "api_id": "customized-via-oas",
+      "versions": [
+        ""
+      ],
+      "allowed_urls": [],
+      "restricted_types": [],
+      "limit": null,
+      "field_access_rights": [],
+      "allowance_scope": ""
     }
   },
   "hmac_enabled": false,

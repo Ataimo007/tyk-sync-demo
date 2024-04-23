@@ -20,6 +20,10 @@
     {
       "file": "api-ebb38d6077024a9177109ccca5d62922.json",
       "oas": {}
+    },
+    {
+      "file": "api-customized-via-oas.json",
+      "oas": {}
     }
   ],
   "policies": [
